@@ -3,7 +3,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { BookOpen, Coffee, Cpu, Globe2 } from "lucide-react";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 export function About() {

@@ -1,9 +1,10 @@
 {
   "Hero": {
-    "role": "Software Developer",
-    "title": "Construyendo el futuro a través del",
-    "titleHighlight": "Código y la Innovación",
-    "description": "¡Hola! Soy Josep, próximo Ingeniero en Software. Me apasiona resolver problemas complejos, aprender nuevas tecnologías y crear aplicaciones web modernas, eficientes y escalables.",
+    "greeting": "Hola, mi nombre es",
+    "name": "Christian Josep",
+    "profession": "Ing. en desarrollo de software",
+    "specialty": "(Front-end)",
+    "description": "Me apasiona resolver problemas complejos, aprender nuevas tecnologías y crear aplicaciones web modernas, eficientes y escalables.",
     "ctaProjects": "Ver mis proyectos",
     "ctaContact": "Contactar"
   },
@@ -29,7 +30,20 @@
     "titleHighlight": "Habilidades",
     "description": "Conjunto de tecnologías y herramientas que utilizo para transformar ideas en productos digitales funcionales y atractivos.",
     "currentFocus": "Especialización Actual",
-    "currentFocusDesc": "Enfocado profundamente en el ecosistema Mobile con Kotlin."
+    "currentFocusDesc": "Enfocado profundamente en el ecosistema Mobile con Kotlin.",
+    "categories": {
+      "frontend": "Web Frontend & Lenguajes",
+      "mobile": "Mobile",
+      "tools": "Herramientas & Otros",
+      "softSkills": "Soft Skills"
+    },
+    "soft": {
+      "Trabajo en Equipo": "Trabajo en Equipo",
+      "Adaptabilidad": "Adaptabilidad",
+      "Resolución de Problemas": "Resolución de Problemas",
+      "Comunicación Efectiva": "Comunicación Efectiva",
+      "Aprendizaje Continuo": "Aprendizaje Continuo"
+    }
   },
   "About": {
     "title": "Sobre",
@@ -49,5 +63,21 @@
     "title": "Experiencia y",
     "titleHighlight": "Educación",
     "description": "Un recorrido por mis proyectos académicos, prácticas y mi evolución como desarrollador."
+  },
+  "Contact": {
+    "title": "Contacto y",
+    "titleHighlight": "Redes",
+    "description": "¿Tienes un proyecto en mente o simplemente quieres saludar? ¡Me encantaría escucharte!",
+    "name": "Nombre",
+    "namePlaceholder": "Tu nombre",
+    "email": "Correo electrónico",
+    "emailPlaceholder": "tu@correo.com",
+    "message": "Mensaje",
+    "messagePlaceholder": "¿En qué puedo ayudarte?",
+    "submit": "Enviar Mensaje",
+    "socialsTitle": "Mis Redes Sociales",
+    "socialsDesc": "También puedes encontrarme en estas plataformas:",
+    "location": "Ubicación",
+    "locationValue": "México (Remoto)"
   }
 }

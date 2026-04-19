@@ -1,9 +1,10 @@
 {
   "Hero": {
-    "role": "Software Developer",
-    "title": "Building the future through",
-    "titleHighlight": "Code and Innovation",
-    "description": "Hi! I'm Josep, an upcoming Software Engineer. I'm passionate about solving complex problems, learning new technologies, and creating modern, efficient, and scalable web applications.",
+    "greeting": "Hi, my name is",
+    "name": "Christian Josep",
+    "profession": "Software Development Engineer",
+    "specialty": "(Front-end)",
+    "description": "I'm passionate about solving complex problems, learning new technologies, and creating modern, efficient, and scalable web applications.",
     "ctaProjects": "View my projects",
     "ctaContact": "Contact me"
   },
@@ -29,7 +30,20 @@
     "titleHighlight": "Skills",
     "description": "Set of technologies and tools I use to transform ideas into functional and attractive digital products.",
     "currentFocus": "Current Focus",
-    "currentFocusDesc": "Deeply focused on the Mobile ecosystem with Kotlin."
+    "currentFocusDesc": "Deeply focused on the Mobile ecosystem with Kotlin.",
+    "categories": {
+      "frontend": "Web Frontend & Languages",
+      "mobile": "Mobile",
+      "tools": "Tools & Others",
+      "softSkills": "Soft Skills"
+    },
+    "soft": {
+      "Trabajo en Equipo": "Teamwork",
+      "Adaptabilidad": "Adaptability",
+      "Resolución de Problemas": "Problem Solving",
+      "Comunicación Efectiva": "Effective Communication",
+      "Aprendizaje Continuo": "Continuous Learning"
+    }
   },
   "About": {
     "title": "About",
@@ -49,5 +63,21 @@
     "title": "Experience &",
     "titleHighlight": "Education",
     "description": "A journey through my academic projects, internships, and my evolution as a developer."
+  },
+  "Contact": {
+    "title": "Contact &",
+    "titleHighlight": "Socials",
+    "description": "Have a project in mind or just want to say hi? I'd love to hear from you!",
+    "name": "Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "your@email.com",
+    "message": "Message",
+    "messagePlaceholder": "How can I help you?",
+    "submit": "Send Message",
+    "socialsTitle": "My Socials",
+    "socialsDesc": "You can also find me on these platforms:",
+    "location": "Location",
+    "locationValue": "Mexico (Remote)"
   }
 }

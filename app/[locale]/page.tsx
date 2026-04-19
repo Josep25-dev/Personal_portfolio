@@ -4,6 +4,7 @@ import { Projects } from "@/components/sections/projects";
 import { About } from "@/components/sections/about";
 import { Experience } from "@/components/sections/experience";
 import { Skills } from "@/components/sections/skills";
+import { Contact } from "@/components/sections/contact";
 
 export default function Page() {
   return (
@@ -14,11 +15,7 @@ export default function Page() {
       <Skills />
       <About />
       <Experience />
-      
-      {/* Spacer para hacer scroll y probar el Navbar */}
-      <section className="h-[50vh] bg-black border-t border-white/5 flex items-center justify-center text-white/50">
-        Próxima sección: Contacto y Redes
-      </section>
+      <Contact />
     </main>
   );
 }
