@@ -49,7 +49,7 @@ const SKILL_CATEGORIES = [
 
 export function Skills() {
   return (
-    <section id="skills" className="py-24 relative bg-black overflow-hidden">
+    <section id="skills" className="py-24 relative bg-gray-50 dark:bg-black transition-colors duration-300 overflow-hidden">
       {/* Background gradients */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[500px] bg-red-900/10 blur-[150px] rounded-full pointer-events-none" />
 
@@ -61,10 +61,10 @@ export function Skills() {
           transition={{ duration: 0.5 }}
           className="mb-16 md:text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Mis <span className="text-red-500">Habilidades</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Mis <span className="text-red-600 dark:text-red-500">Habilidades</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Conjunto de tecnologías y herramientas que utilizo para transformar ideas en productos digitales funcionales y atractivos.
           </p>
         </motion.div>
@@ -77,7 +77,7 @@ export function Skills() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white/5 border border-white/10 rounded-2xl p-6 lg:p-8 hover:border-red-500/30 transition-colors group relative overflow-hidden"
+              className="bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-2xl p-6 lg:p-8 hover:border-red-500/30 dark:hover:border-red-500/30 transition-colors group relative overflow-hidden shadow-sm dark:shadow-none"
             >
               {/* Subtle hover glow matching category color */}
               <div
@@ -85,17 +85,17 @@ export function Skills() {
               />
 
               <div className="flex items-center gap-4 mb-6 relative z-10">
-                <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-gray-300 group-hover:text-white group-hover:border-white/20 transition-all">
+                <div className="w-12 h-12 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 flex items-center justify-center text-gray-600 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white group-hover:border-gray-300 dark:group-hover:border-white/20 transition-all">
                   {category.icon}
                 </div>
-                <h3 className="text-xl font-bold text-white">{category.title}</h3>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white">{category.title}</h3>
               </div>
 
               <div className="flex flex-wrap gap-2.5 relative z-10">
                 {category.skills.map((skill, skillIndex) => (
                   <span
                     key={skillIndex}
-                    className="px-3 py-1.5 bg-black/50 border border-white/5 rounded-lg text-sm font-medium text-gray-300 hover:text-white hover:border-red-500/50 hover:bg-red-500/10 transition-all cursor-default"
+                    className="px-3 py-1.5 bg-gray-50 dark:bg-black/50 border border-gray-200 dark:border-white/5 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:border-red-500/50 dark:hover:border-red-500/50 hover:bg-red-50 dark:hover:bg-red-500/10 transition-all cursor-default"
                   >
                     {skill}
                   </span>
@@ -111,15 +111,15 @@ export function Skills() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-12 max-w-5xl mx-auto bg-gradient-to-r from-red-950/30 to-black border border-red-900/30 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4"
+          className="mt-12 max-w-5xl mx-auto bg-gradient-to-r from-red-50/50 to-white dark:from-red-950/30 dark:to-black border border-red-200 dark:border-red-900/30 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-sm dark:shadow-none"
         >
           <div className="flex items-center gap-4">
-            <div className="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center text-red-500 animate-pulse">
+            <div className="w-10 h-10 rounded-full bg-red-100 dark:bg-red-500/20 flex items-center justify-center text-red-600 dark:text-red-500 animate-pulse">
               <TerminalSquare className="w-5 h-5" />
             </div>
             <div>
-              <h4 className="text-white font-medium">Especialización Actual</h4>
-              <p className="text-gray-400 text-sm">Enfocado profundamente en el ecosistema Mobile con Kotlin.</p>
+              <h4 className="text-gray-900 dark:text-white font-medium">Especialización Actual</h4>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">Enfocado profundamente en el ecosistema Mobile con Kotlin.</p>
             </div>
           </div>
         </motion.div>

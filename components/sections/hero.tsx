@@ -105,7 +105,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#050505]">
+    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gray-50 dark:bg-[#050505] transition-colors duration-300">
       {/* Interactive Particles */}
       <canvas ref={canvasRef} className="absolute inset-0 z-0 pointer-events-auto" />
 
@@ -118,18 +118,20 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-red-500/30 bg-red-500/10 text-red-400 text-sm font-medium mb-8 backdrop-blur-sm"
-        >     
+          className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-red-500/30 bg-red-500/10 text-red-600 dark:text-red-400 text-sm font-medium mb-8 backdrop-blur-sm"
+        >
+          <Terminal className="w-4 h-4" />
+          <span>Software Developer</span>
         </motion.div>
 
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight max-w-4xl leading-[1.1]"
+          className="text-5xl md:text-7xl lg:text-8xl font-bold text-gray-900 dark:text-white tracking-tight max-w-4xl leading-[1.1]"
         >
           Construyendo el futuro a través del <br className="hidden md:block" />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-red-800">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-900 dark:from-red-500 dark:to-red-800">
             Código y la Innovación
           </span>
         </motion.h1>
@@ -138,7 +140,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mt-6 text-lg md:text-xl text-gray-400 max-w-2xl font-light"
+          className="mt-6 text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl font-light"
         >
           ¡Hola! Soy Josep, próximo Ingeniero en Software. Me apasiona resolver problemas complejos, aprender nuevas tecnologías y crear aplicaciones web modernas, eficientes y escalables.
         </motion.p>
@@ -158,7 +160,7 @@ export function Hero() {
           </Link>
           <Link
             href="#contact"
-            className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 text-white font-medium transition-all flex items-center justify-center gap-2 backdrop-blur-sm hover:border-red-500/30"
+            className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-black/5 hover:bg-black/10 dark:bg-white/5 dark:hover:bg-white/10 border border-black/10 dark:border-white/10 text-gray-900 dark:text-white font-medium transition-all flex items-center justify-center gap-2 backdrop-blur-sm hover:border-red-500/30 dark:hover:border-red-500/30"
           >
             Contactar
           </Link>

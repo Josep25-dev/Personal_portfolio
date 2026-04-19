@@ -7,7 +7,7 @@ import { Skills } from "@/components/sections/skills";
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-black text-white selection:bg-red-500/30">
+    <main className="min-h-screen bg-gray-50 dark:bg-black text-gray-900 dark:text-white selection:bg-red-500/30">
       <Navbar />
       <Hero />
       <Projects />

@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Code2, Send } from "lucide-react";
 import Link from "next/link";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 const NAV_LINKS = [
   { name: "Inicio", href: "#home" },
@@ -59,18 +60,18 @@ export function Navbar() {
         {/* Left: Logo and Title */}
         <Link 
           href="#home" 
-          className="flex items-center gap-2.5 group w-32" // Fixed width to help centering the middle nav
+          className="flex items-center gap-2.5 group w-40" // Fixed width to help centering the middle nav
         >
           <div className="w-10 h-10 rounded-xl bg-red-600/10 border border-red-500/20 flex items-center justify-center text-red-500 group-hover:bg-red-600/20 transition-colors">
             <Code2 className="w-5 h-5" />
           </div>
-          <span className="text-white font-medium tracking-wide hidden md:block">
+          <span className="text-gray-900 dark:text-white font-medium tracking-wide hidden md:block">
             Mi Portafolio
           </span>
         </Link>
 
         {/* Center: Pill Navigation */}
-        <nav className="hidden md:flex bg-black/40 backdrop-blur-xl border border-white/10 shadow-[0_0_20px_rgba(220,38,38,0.1)] rounded-full p-1.5 items-center gap-1">
+        <nav className="hidden md:flex bg-white/70 dark:bg-black/40 backdrop-blur-xl border border-black/10 dark:border-white/10 shadow-[0_0_20px_rgba(220,38,38,0.05)] dark:shadow-[0_0_20px_rgba(220,38,38,0.1)] rounded-full p-1.5 items-center gap-1">
           {NAV_LINKS.map((link) => {
             const isActive = activeSection === link.href;
             
@@ -80,7 +81,7 @@ export function Navbar() {
                 href={link.href}
                 onClick={() => setActiveSection(link.href)}
                 className={`relative px-5 py-2.5 rounded-full text-sm font-medium transition-colors ${
-                  isActive ? "text-white" : "text-gray-400 hover:text-gray-200"
+                  isActive ? "text-white" : "text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-200"
                 }`}
               >
                 {isActive && (
@@ -96,15 +97,16 @@ export function Navbar() {
           })}
         </nav>
 
-        {/* Right: Contact Button */}
-        <div className="flex justify-end w-32"> {/* Fixed width to balance the left side */}
+        {/* Right: Contact Button & Theme Toggle */}
+        <div className="flex items-center justify-end w-40 gap-3"> {/* Fixed width to balance the left side */}
+          <ThemeToggle />
           <Link
             href="#contact"
             onClick={() => setActiveSection("#contact")}
             className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border ${
               activeSection === "#contact"
                 ? "bg-red-600/90 text-white border-red-500 shadow-[0_0_15px_rgba(220,38,38,0.4)]"
-                : "bg-white/5 text-gray-300 hover:text-white border-white/10 hover:border-red-500/50 hover:bg-white/10"
+                : "bg-black/5 dark:bg-white/5 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white border-black/10 dark:border-white/10 hover:border-red-500/50 dark:hover:border-red-500/50 hover:bg-black/10 dark:hover:bg-white/10"
             }`}
           >
             <span className="hidden sm:block">Contacto</span>

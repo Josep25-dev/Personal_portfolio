@@ -42,7 +42,7 @@ const PROJECTS = [
 
 export function Projects() {
   return (
-    <section id="projects" className="py-24 relative bg-[#050505] overflow-hidden">
+    <section id="projects" className="py-24 relative bg-white dark:bg-[#050505] transition-colors duration-300 overflow-hidden">
       {/* Background glow effects */}
       <div className="absolute top-1/4 left-0 w-96 h-96 bg-red-900/10 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-red-900/10 blur-[120px] rounded-full pointer-events-none" />
@@ -55,10 +55,10 @@ export function Projects() {
           transition={{ duration: 0.5 }}
           className="mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Mis Proyectos <span className="text-red-500">Destacados</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Mis Proyectos <span className="text-red-600 dark:text-red-500">Destacados</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl">
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl">
             Una selección de los proyectos y prácticas que he desarrollado durante mi formación como Ingeniero en Software, demostrando mis habilidades técnicas y de resolución de problemas.
           </p>
         </motion.div>
@@ -71,7 +71,7 @@ export function Projects() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative flex flex-col bg-white/5 border border-white/10 rounded-2xl overflow-hidden hover:border-red-500/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(220,38,38,0.1)]"
+              className="group relative flex flex-col bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-2xl overflow-hidden hover:border-red-500/30 dark:hover:border-red-500/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(220,38,38,0.05)] dark:hover:shadow-[0_0_30px_rgba(220,38,38,0.1)]"
             >
               {/* Project Image Placeholder */}
               <div
@@ -101,10 +101,10 @@ export function Projects() {
 
               {/* Project Info */}
               <div className="p-6 flex flex-col flex-grow">
-                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-red-400 transition-colors">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">
                   {project.title}
                 </h3>
-                <p className="text-gray-400 text-sm mb-6 flex-grow line-clamp-3">
+                <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow line-clamp-3">
                   {project.description}
                 </p>
 
@@ -113,7 +113,7 @@ export function Projects() {
                   {project.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className="px-2.5 py-1 text-xs font-medium bg-white/5 border border-white/10 rounded-md text-gray-300"
+                      className="px-2.5 py-1 text-xs font-medium bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-md text-gray-600 dark:text-gray-300"
                     >
                       {tech}
                     </span>
@@ -121,10 +121,10 @@ export function Projects() {
                 </div>
 
                 {/* Footer / Read More Button */}
-                <div className="mt-auto pt-4 border-t border-white/5">
+                <div className="mt-auto pt-4 border-t border-gray-200 dark:border-white/5">
                   <Link
                     href={project.liveUrl}
-                    className="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-red-500 transition-colors"
+                    className="inline-flex items-center gap-2 text-sm font-medium text-gray-900 dark:text-white hover:text-red-600 dark:hover:text-red-500 transition-colors"
                   >
                     Saber más sobre el proyecto
                     <ExternalLink className="w-4 h-4" />

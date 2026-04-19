@@ -30,7 +30,7 @@ const TIMELINE_ITEMS = [
 
 export function Experience() {
   return (
-    <section id="experience" className="py-24 relative bg-[#050505]">
+    <section id="experience" className="py-24 relative bg-gray-50 dark:bg-[#050505] transition-colors duration-300">
       <div className="container mx-auto px-4 md:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -39,10 +39,10 @@ export function Experience() {
           transition={{ duration: 0.5 }}
           className="mb-16 md:text-center"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Experiencia y <span className="text-red-500">Educación</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Experiencia y <span className="text-red-600 dark:text-red-500">Educación</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Un recorrido por mis proyectos académicos, prácticas y mi evolución como desarrollador.
           </p>
         </motion.div>
@@ -65,21 +65,21 @@ export function Experience() {
                   className="relative flex flex-col md:flex-row items-start md:items-center"
                 >
                   {/* Punto en la línea de tiempo */}
-                  <div className="absolute left-[11px] md:left-1/2 w-2.5 h-2.5 rounded-full bg-red-500 shadow-[0_0_10px_rgba(220,38,38,0.8)] md:-translate-x-1/2 mt-2 md:mt-0 z-10" />
+                  <div className="absolute left-[11px] md:left-1/2 w-2.5 h-2.5 rounded-full bg-red-600 dark:bg-red-500 shadow-[0_0_10px_rgba(220,38,38,0.8)] md:-translate-x-1/2 mt-2 md:mt-0 z-10" />
 
                   {/* Contenido (alternando izquierda/derecha en desktop) */}
                   <div className={`w-full md:w-1/2 pl-10 md:pl-0 ${isEven ? 'md:pr-12 md:text-right' : 'md:pl-12 md:ml-auto'}`}>
-                    <div className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-red-500/30 hover:bg-white/10 transition-colors">
-                      <span className="inline-block text-red-400 text-sm font-semibold mb-2 bg-red-500/10 px-3 py-1 rounded-full">
+                    <div className="bg-white dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-2xl p-6 hover:border-red-500/30 dark:hover:border-red-500/30 hover:bg-gray-50 dark:hover:bg-white/10 transition-colors shadow-sm dark:shadow-none">
+                      <span className="inline-block text-red-600 dark:text-red-400 text-sm font-semibold mb-2 bg-red-100 dark:bg-red-500/10 px-3 py-1 rounded-full">
                         {item.date}
                       </span>
-                      <h3 className="text-xl font-bold text-white mb-1">
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
                         {item.title}
                       </h3>
-                      <h4 className="text-sm font-medium text-gray-400 mb-3 pb-3 border-b border-white/5">
+                      <h4 className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-3 pb-3 border-b border-gray-200 dark:border-white/5">
                         {item.company}
                       </h4>
-                      <p className="text-gray-300 text-sm leading-relaxed">
+                      <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
                         {item.description}
                       </p>
                     </div>
