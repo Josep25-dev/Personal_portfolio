@@ -1,19 +1,24 @@
-import { Button } from "@/components/ui/button"
+import { Navbar } from "@/components/layout/navbar";
+import { Hero } from "@/components/sections/hero";
+import { Projects } from "@/components/sections/projects";
+import { About } from "@/components/sections/about";
+import { Experience } from "@/components/sections/experience";
+import { Skills } from "@/components/sections/skills";
 
 export default function Page() {
   return (
-    <div className="flex min-h-svh p-6">
-      <div className="flex max-w-md min-w-0 flex-col gap-4 text-sm leading-loose">
-        <div>
-          <h1 className="font-medium">Project ready!</h1>
-          <p>You may now add components and start building.</p>
-          <p>We&apos;ve already added the button component for you.</p>
-          <Button className="mt-2">Button</Button>
-        </div>
-        <div className="font-mono text-xs text-muted-foreground">
-          (Press <kbd>d</kbd> to toggle dark mode)
-        </div>
-      </div>
-    </div>
-  )
+    <main className="min-h-screen bg-black text-white selection:bg-red-500/30">
+      <Navbar />
+      <Hero />
+      <Projects />
+      <Skills />
+      <About />
+      <Experience />
+      
+      {/* Spacer para hacer scroll y probar el Navbar */}
+      <section className="h-[50vh] bg-black border-t border-white/5 flex items-center justify-center text-white/50">
+        Próxima sección: Contacto y Redes
+      </section>
+    </main>
+  );
 }
