@@ -5,23 +5,26 @@ import { motion } from "framer-motion";
 import { Code2, Send } from "lucide-react";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
-
-const NAV_LINKS = [
-  { name: "Inicio", href: "#home" },
-  { name: "Proyectos", href: "#projects" },
-  { name: "Skills", href: "#skills" },
-  { name: "Sobre Mí", href: "#about" },
-  { name: "Experiencia", href: "#experience" },
-];
+import { LanguageToggle } from "@/components/ui/language-toggle";
+import { useTranslations } from "next-intl";
 
 export function Navbar() {
+  const t = useTranslations("Navbar");
   const [activeSection, setActiveSection] = useState("#home");
+
+  const NAV_LINKS = [
+    { name: t("home"), href: "#home" },
+    { name: t("projects"), href: "#projects" },
+    { name: t("skills"), href: "#skills" },
+    { name: t("about"), href: "#about" },
+    { name: t("experience"), href: "#experience" },
+  ];
 
   useEffect(() => {
     // Simple intersection observer to update active state based on scroll
     const handleScroll = () => {
       // Add contact to the list of sections to check for scroll highlighting
-      const allSections = [...NAV_LINKS, { name: "Contacto", href: "#contact" }];
+      const allSections = [...NAV_LINKS, { name: t("contact"), href: "#contact" }];
       const sections = allSections.map(link => link.href.substring(1));
       
       let current = "";
@@ -62,11 +65,11 @@ export function Navbar() {
           href="#home" 
           className="flex items-center gap-2.5 group w-40" // Fixed width to help centering the middle nav
         >
-          <div className="w-10 h-10 rounded-xl bg-red-600/10 border border-red-500/20 flex items-center justify-center text-red-500 group-hover:bg-red-600/20 transition-colors">
+          <div className="w-10 h-10 shrink-0 rounded-xl bg-red-600/10 border border-red-500/20 flex items-center justify-center text-red-500 group-hover:bg-red-600/20 transition-colors">
             <Code2 className="w-5 h-5" />
           </div>
-          <span className="text-gray-900 dark:text-white font-medium tracking-wide hidden md:block">
-            Mi Portafolio
+          <span className="text-gray-900 dark:text-white font-medium tracking-wide hidden md:block whitespace-nowrap">
+            {t("title")}
           </span>
         </Link>
 
@@ -98,18 +101,19 @@ export function Navbar() {
         </nav>
 
         {/* Right: Contact Button & Theme Toggle */}
-        <div className="flex items-center justify-end w-40 gap-3"> {/* Fixed width to balance the left side */}
+        <div className="flex items-center justify-end w-40 gap-2"> {/* Fixed width to balance the left side */}
+          <LanguageToggle />
           <ThemeToggle />
           <Link
             href="#contact"
             onClick={() => setActiveSection("#contact")}
-            className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border ${
+            className={`flex shrink-0 items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-300 border ${
               activeSection === "#contact"
                 ? "bg-red-600/90 text-white border-red-500 shadow-[0_0_15px_rgba(220,38,38,0.4)]"
                 : "bg-black/5 dark:bg-white/5 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white border-black/10 dark:border-white/10 hover:border-red-500/50 dark:hover:border-red-500/50 hover:bg-black/10 dark:hover:bg-white/10"
             }`}
           >
-            <span className="hidden sm:block">Contacto</span>
+            <span className="hidden sm:block">{t("contact")}</span>
             <Send className="w-4 h-4" />
           </Link>
         </div>

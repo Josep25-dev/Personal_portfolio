@@ -4,8 +4,10 @@ import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Terminal } from "lucide-react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export function Hero() {
+  const t = useTranslations("Hero");
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -121,7 +123,7 @@ export function Hero() {
           className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-red-500/30 bg-red-500/10 text-red-600 dark:text-red-400 text-sm font-medium mb-8 backdrop-blur-sm"
         >
           <Terminal className="w-4 h-4" />
-          <span>Software Developer</span>
+          <span>{t("role")}</span>
         </motion.div>
 
         <motion.h1
@@ -130,9 +132,9 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-5xl md:text-7xl lg:text-8xl font-bold text-gray-900 dark:text-white tracking-tight max-w-4xl leading-[1.1]"
         >
-          Construyendo el futuro a través del <br className="hidden md:block" />
+          {t("title")} <br className="hidden md:block" />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-600 to-red-900 dark:from-red-500 dark:to-red-800">
-            Código y la Innovación
+            {t("titleHighlight")}
           </span>
         </motion.h1>
 
@@ -142,7 +144,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mt-6 text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-2xl font-light"
         >
-          ¡Hola! Soy Josep, próximo Ingeniero en Software. Me apasiona resolver problemas complejos, aprender nuevas tecnologías y crear aplicaciones web modernas, eficientes y escalables.
+          {t("description")}
         </motion.p>
 
         <motion.div
@@ -155,14 +157,14 @@ export function Hero() {
             href="#projects"
             className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-red-600 hover:bg-red-700 text-white font-medium transition-all shadow-[0_0_20px_rgba(220,38,38,0.4)] hover:shadow-[0_0_30px_rgba(220,38,38,0.6)] flex items-center justify-center gap-2"
           >
-            Ver mis proyectos
+            {t("ctaProjects")}
             <ArrowRight className="w-4 h-4" />
           </Link>
           <Link
             href="#contact"
             className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-black/5 hover:bg-black/10 dark:bg-white/5 dark:hover:bg-white/10 border border-black/10 dark:border-white/10 text-gray-900 dark:text-white font-medium transition-all flex items-center justify-center gap-2 backdrop-blur-sm hover:border-red-500/30 dark:hover:border-red-500/30"
           >
-            Contactar
+            {t("ctaContact")}
           </Link>
         </motion.div>
       </div>

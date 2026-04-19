@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 // Datos de la línea de tiempo extraídos de tu CV
 const TIMELINE_ITEMS = [
@@ -29,6 +30,8 @@ const TIMELINE_ITEMS = [
 ];
 
 export function Experience() {
+  const t = useTranslations("Experience");
+
   return (
     <section id="experience" className="py-24 relative bg-gray-50 dark:bg-[#050505] transition-colors duration-300">
       <div className="container mx-auto px-4 md:px-8 relative z-10">
@@ -40,10 +43,10 @@ export function Experience() {
           className="mb-16 md:text-center"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Experiencia y <span className="text-red-600 dark:text-red-500">Educación</span>
+            {t("title")} <span className="text-red-600 dark:text-red-500">{t("titleHighlight")}</span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Un recorrido por mis proyectos académicos, prácticas y mi evolución como desarrollador.
+            {t("description")}
           </p>
         </motion.div>
 

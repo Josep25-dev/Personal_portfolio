@@ -4,8 +4,11 @@ import React from "react";
 import { motion } from "framer-motion";
 import { BookOpen, Coffee, Cpu, Globe2 } from "lucide-react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export function About() {
+  const t = useTranslations("About");
+
   return (
     <section id="about" className="py-24 relative bg-white dark:bg-black transition-colors duration-300 overflow-hidden">
       {/* Decorative background elements */}
@@ -21,10 +24,10 @@ export function About() {
           className="mb-16 md:text-center"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Sobre <span className="text-red-600 dark:text-red-500">Mí</span>
+            {t("title")} <span className="text-red-600 dark:text-red-500">{t("titleHighlight")}</span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Conoce un poco más sobre mi historia, mi enfoque hacia la ingeniería de software y lo que me motiva día a día.
+            {t("description")}
           </p>
         </motion.div>
 
@@ -56,8 +59,8 @@ export function About() {
                   <BookOpen className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="text-gray-900 dark:text-white font-bold text-lg">Aprendizaje Continuo</h4>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm">Siempre explorando nuevas tecnologías</p>
+                  <h4 className="text-gray-900 dark:text-white font-bold text-lg">{t("badgeTitle")}</h4>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">{t("badgeDesc")}</p>
                 </div>
               </div>
             </div>
@@ -72,34 +75,28 @@ export function About() {
             className="flex flex-col justify-center"
           >
             <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
-              Próximo Ingeniero en Software apasionado por crear soluciones que importan.
+              {t("headline")}
             </h3>
             
             <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-              <p>
-                Desde que escribí mi primera línea de código, descubrí que la programación es mucho más que matemáticas y lógica; es una herramienta poderosa para resolver problemas reales y mejorar la vida de las personas.
-              </p>
-              <p>
-                Actualmente me encuentro en la recta final de mi carrera en <span className="text-red-600 dark:text-red-400 font-medium">Ingeniería de Software</span>. Durante mis estudios, no solo me he enfocado en aprobar materias, sino en construir proyectos tangibles, entender la arquitectura detrás de las aplicaciones y adoptar buenas prácticas de desarrollo (Clean Code, SOLID, metodologías ágiles).
-              </p>
-              <p>
-                Mi objetivo es unirme a un equipo dinámico donde pueda aportar valor desde el primer día, enfrentar nuevos retos técnicos y seguir creciendo profesionalmente.
-              </p>
+              <p>{t("p1")}</p>
+              <p dangerouslySetInnerHTML={{ __html: t.raw("p2") }} />
+              <p>{t("p3")}</p>
             </div>
 
             {/* Key Traits/Interests */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
               <div className="flex items-center gap-3 p-4 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/5 hover:border-red-500/30 dark:hover:border-red-500/30 transition-colors shadow-sm dark:shadow-none">
                 <Cpu className="w-5 h-5 text-red-600 dark:text-red-500" />
-                <span className="text-sm font-medium text-gray-900 dark:text-white">Arquitectura de Software</span>
+                <span className="text-sm font-medium text-gray-900 dark:text-white">{t("trait1")}</span>
               </div>
               <div className="flex items-center gap-3 p-4 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/5 hover:border-red-500/30 dark:hover:border-red-500/30 transition-colors shadow-sm dark:shadow-none">
                 <Globe2 className="w-5 h-5 text-red-600 dark:text-red-500" />
-                <span className="text-sm font-medium text-gray-900 dark:text-white">Desarrollo Web Full-Stack</span>
+                <span className="text-sm font-medium text-gray-900 dark:text-white">{t("trait2")}</span>
               </div>
               <div className="flex items-center gap-3 p-4 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/5 hover:border-red-500/30 dark:hover:border-red-500/30 transition-colors shadow-sm dark:shadow-none">
                 <Coffee className="w-5 h-5 text-red-600 dark:text-red-500" />
-                <span className="text-sm font-medium text-gray-900 dark:text-white">Resolución de Problemas</span>
+                <span className="text-sm font-medium text-gray-900 dark:text-white">{t("trait3")}</span>
               </div>
             </div>
           </motion.div>

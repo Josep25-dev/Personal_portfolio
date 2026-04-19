@@ -1,0 +1,53 @@
+{
+  "Hero": {
+    "role": "Software Developer",
+    "title": "Building the future through",
+    "titleHighlight": "Code and Innovation",
+    "description": "Hi! I'm Josep, an upcoming Software Engineer. I'm passionate about solving complex problems, learning new technologies, and creating modern, efficient, and scalable web applications.",
+    "ctaProjects": "View my projects",
+    "ctaContact": "Contact me"
+  },
+  "Navbar": {
+    "home": "Home",
+    "projects": "Projects",
+    "skills": "Skills",
+    "about": "About Me",
+    "experience": "Experience",
+    "contact": "Contact",
+    "title": "My Portfolio"
+  },
+  "Projects": {
+    "title": "My Featured",
+    "titleHighlight": "Projects",
+    "description": "A selection of projects and practices I have developed during my Software Engineering education, showcasing my technical and problem-solving skills.",
+    "viewCode": "View Code",
+    "visitProject": "Visit Project",
+    "learnMore": "Learn more about the project"
+  },
+  "Skills": {
+    "title": "My",
+    "titleHighlight": "Skills",
+    "description": "Set of technologies and tools I use to transform ideas into functional and attractive digital products.",
+    "currentFocus": "Current Focus",
+    "currentFocusDesc": "Deeply focused on the Mobile ecosystem with Kotlin."
+  },
+  "About": {
+    "title": "About",
+    "titleHighlight": "Me",
+    "description": "Learn a bit more about my story, my approach to software engineering, and what motivates me every day.",
+    "badgeTitle": "Continuous Learning",
+    "badgeDesc": "Always exploring new technologies",
+    "headline": "Upcoming Software Engineer passionate about creating solutions that matter.",
+    "p1": "Since I wrote my first line of code, I discovered that programming is much more than math and logic; it's a powerful tool to solve real problems and improve people's lives.",
+    "p2": "I am currently in the final stretch of my Software Engineering degree. During my studies, I have focused not only on passing subjects but on building tangible projects, understanding the architecture behind applications, and adopting good development practices (Clean Code, SOLID, agile methodologies).",
+    "p3": "My goal is to join a dynamic team where I can add value from day one, face new technical challenges, and continue growing professionally.",
+    "trait1": "Software Architecture",
+    "trait2": "Full-Stack Web Dev",
+    "trait3": "Problem Solving"
+  },
+  "Experience": {
+    "title": "Experience &",
+    "titleHighlight": "Education",
+    "description": "A journey through my academic projects, internships, and my evolution as a developer."
+  }
+}

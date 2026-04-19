@@ -9,6 +9,7 @@ import {
   Wrench,
   TerminalSquare
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 // Categorías basadas en la imagen del CV
 const SKILL_CATEGORIES = [
@@ -48,6 +49,8 @@ const SKILL_CATEGORIES = [
 ];
 
 export function Skills() {
+  const t = useTranslations("Skills");
+
   return (
     <section id="skills" className="py-24 relative bg-gray-50 dark:bg-black transition-colors duration-300 overflow-hidden">
       {/* Background gradients */}
@@ -62,10 +65,10 @@ export function Skills() {
           className="mb-16 md:text-center"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Mis <span className="text-red-600 dark:text-red-500">Habilidades</span>
+            {t("title")} <span className="text-red-600 dark:text-red-500">{t("titleHighlight")}</span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Conjunto de tecnologías y herramientas que utilizo para transformar ideas en productos digitales funcionales y atractivos.
+            {t("description")}
           </p>
         </motion.div>
 
@@ -118,8 +121,8 @@ export function Skills() {
               <TerminalSquare className="w-5 h-5" />
             </div>
             <div>
-              <h4 className="text-gray-900 dark:text-white font-medium">Especialización Actual</h4>
-              <p className="text-gray-600 dark:text-gray-400 text-sm">Enfocado profundamente en el ecosistema Mobile con Kotlin.</p>
+              <h4 className="text-gray-900 dark:text-white font-medium">{t("currentFocus")}</h4>
+              <p className="text-gray-600 dark:text-gray-400 text-sm">{t("currentFocusDesc")}</p>
             </div>
           </div>
         </motion.div>

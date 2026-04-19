@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, GitBranch, Code2 } from "lucide-react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 // Datos de ejemplo: Puedes cambiar estos datos por tus proyectos reales
 const PROJECTS = [
@@ -41,6 +42,8 @@ const PROJECTS = [
 ];
 
 export function Projects() {
+  const t = useTranslations("Projects");
+
   return (
     <section id="projects" className="py-24 relative bg-white dark:bg-[#050505] transition-colors duration-300 overflow-hidden">
       {/* Background glow effects */}
@@ -56,10 +59,10 @@ export function Projects() {
           className="mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Mis Proyectos <span className="text-red-600 dark:text-red-500">Destacados</span>
+            {t("title")} <span className="text-red-600 dark:text-red-500">{t("titleHighlight")}</span>
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-2xl">
-            Una selección de los proyectos y prácticas que he desarrollado durante mi formación como Ingeniero en Software, demostrando mis habilidades técnicas y de resolución de problemas.
+            {t("description")}
           </p>
         </motion.div>
 
@@ -85,14 +88,14 @@ export function Projects() {
                   <Link
                     href={project.githubUrl}
                     className="p-3 bg-white/10 rounded-full text-white hover:bg-red-600 transition-colors"
-                    title="Ver Código"
+                    title={t("viewCode")}
                   >
                     <GitBranch className="w-5 h-5" />
                   </Link>
                   <Link
                     href={project.liveUrl}
                     className="p-3 bg-white/10 rounded-full text-white hover:bg-red-600 transition-colors"
-                    title="Visitar Proyecto"
+                    title={t("visitProject")}
                   >
                     <ExternalLink className="w-5 h-5" />
                   </Link>
@@ -126,7 +129,7 @@ export function Projects() {
                     href={project.liveUrl}
                     className="inline-flex items-center gap-2 text-sm font-medium text-gray-900 dark:text-white hover:text-red-600 dark:hover:text-red-500 transition-colors"
                   >
-                    Saber más sobre el proyecto
+                    {t("learnMore")}
                     <ExternalLink className="w-4 h-4" />
                   </Link>
                 </div>
