@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import {
-  Smartphone,
+  Server,
   LayoutTemplate,
   Wrench,
   TerminalSquare,
@@ -21,10 +21,10 @@ const SKILL_CATEGORIES = [
     color: "from-red-500 to-orange-500",
   },
   {
-    id: "mobile",
-    titleKey: "mobile",
-    icon: <Smartphone className="w-6 h-6" />,
-    skills: ["Kotlin", "Jetpack Compose", "Clean Architecture"],
+    id: "backend",
+    titleKey: "backend",
+    icon: <Server className="w-6 h-6" />,
+    skills: ["Node.js", "Nest.js", "Express", "PHP"],
     color: "from-blue-500 to-indigo-500",
   },
   {

@@ -23,17 +23,18 @@
     "description": "A selection of projects and practices I have developed during my Software Engineering education, showcasing my technical and problem-solving skills.",
     "viewCode": "View Code",
     "visitProject": "Visit Project",
-    "learnMore": "Learn more about the project"
+    "learnMore": "Learn more about the project",
+    "viewAll": "All my projects"
   },
   "Skills": {
     "title": "My",
     "titleHighlight": "Skills",
     "description": "Set of technologies and tools I use to transform ideas into functional and attractive digital products.",
     "currentFocus": "Current Focus",
-    "currentFocusDesc": "Deeply focused on the Mobile ecosystem with Kotlin.",
+    "currentFocusDesc": "Deeply focused on the Web ecosystem and Full-Stack development.",
     "categories": {
       "frontend": "Web Frontend & Languages",
-      "mobile": "Mobile",
+      "backend": "Backend",
       "tools": "Tools & Others",
       "softSkills": "Soft Skills"
     },

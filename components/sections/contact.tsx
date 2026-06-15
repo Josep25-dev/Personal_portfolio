@@ -112,7 +112,7 @@ export function Contact() {
 
             <div className="space-y-4">
               <a
-                href="mailto:tu-correo@gmail.com"
+                href="mailto:josep.toledo.dev@gmail.com"
                 className="flex items-center gap-4 p-4 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/5 hover:border-red-500/30 dark:hover:border-red-500/30 transition-colors group"
               >
                 <div className="w-12 h-12 rounded-full bg-white dark:bg-[#111] flex items-center justify-center text-gray-600 dark:text-gray-400 group-hover:text-red-600 dark:group-hover:text-red-500 shadow-sm dark:shadow-none transition-colors">
@@ -120,12 +120,12 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-gray-500 dark:text-gray-400">Email</p>
-                  <p className="text-gray-900 dark:text-white font-medium">tu-correo@gmail.com</p>
+                  <p className="text-gray-900 dark:text-white font-medium">josep.toledo.dev@gmail.com</p>
                 </div>
               </a>
 
               <a
-                href="https://linkedin.com/in/TuUsuario"
+                href="https://www.linkedin.com/in/christian-josep-toledo-9463a4404"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/5 hover:border-red-500/30 dark:hover:border-red-500/30 transition-colors group"
@@ -135,12 +135,12 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-gray-500 dark:text-gray-400">LinkedIn</p>
-                  <p className="text-gray-900 dark:text-white font-medium">/in/TuUsuario</p>
+                  <p className="text-gray-900 dark:text-white font-medium">Christian Josep Toledo</p>
                 </div>
               </a>
 
               <a
-                href="https://github.com/TuUsuario"
+                href="https://github.com/Josep25-dev"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 p-4 rounded-xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/5 hover:border-red-500/30 dark:hover:border-red-500/30 transition-colors group"
@@ -150,7 +150,7 @@ export function Contact() {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-gray-500 dark:text-gray-400">GitHub</p>
-                  <p className="text-gray-900 dark:text-white font-medium">/TuUsuario</p>
+                  <p className="text-gray-900 dark:text-white font-medium">Josep25-dev</p>
                 </div>
               </a>
 

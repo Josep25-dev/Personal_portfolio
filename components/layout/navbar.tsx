@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Code2, Send } from "lucide-react";
+import { Code2, Send, Home, FolderKanban, Wrench, User, Briefcase } from "lucide-react";
 import Link from "next/link";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
 import { LanguageToggle } from "@/components/ui/language-toggle";
@@ -13,11 +13,11 @@ export function Navbar() {
   const [activeSection, setActiveSection] = useState("#home");
 
   const NAV_LINKS = [
-    { name: t("home"), href: "#home" },
-    { name: t("projects"), href: "#projects" },
-    { name: t("skills"), href: "#skills" },
-    { name: t("about"), href: "#about" },
-    { name: t("experience"), href: "#experience" },
+    { name: t("home"), href: "#home", icon: Home },
+    { name: t("projects"), href: "#projects", icon: FolderKanban },
+    { name: t("skills"), href: "#skills", icon: Wrench },
+    { name: t("about"), href: "#about", icon: User },
+    { name: t("experience"), href: "#experience", icon: Briefcase },
   ];
 
   useEffect(() => {
@@ -53,13 +53,14 @@ export function Navbar() {
   }, [activeSection]);
 
   return (
-    <motion.header
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      className="fixed top-6 left-0 right-0 z-50 px-6 lg:px-12"
-    >
-      <div className="flex items-center justify-between w-full max-w-7xl mx-auto">
+    <>
+      <motion.header
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
+        className="fixed top-6 left-0 right-0 z-50 px-6 lg:px-12 pointer-events-none"
+      >
+        <div className="flex items-center justify-between w-full max-w-7xl mx-auto pointer-events-auto">
         
         {/* Left: Logo and Title */}
         <Link 
@@ -80,7 +81,7 @@ export function Navbar() {
             const isActive = activeSection === link.href;
             
             return (
-              <Link
+              <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setActiveSection(link.href)}
@@ -96,7 +97,7 @@ export function Navbar() {
                   />
                 )}
                 <span className="relative z-10">{link.name}</span>
-              </Link>
+              </a>
             );
           })}
         </nav>
@@ -120,34 +121,53 @@ export function Navbar() {
         </div>
 
       </div>
+      </motion.header>
 
-      {/* Mobile Navigation Pill (Visible only on small screens) */}
-      <div className="flex md:hidden justify-center mt-4">
-        <nav className="bg-black/60 backdrop-blur-xl border border-white/10 rounded-full p-1.5 flex items-center overflow-x-auto max-w-full hide-scrollbar">
-          {[...NAV_LINKS].map((link) => {
+      {/* Mobile Navigation Dock (Visible only on small screens) */}
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
+        className="fixed bottom-6 left-0 right-0 z-50 px-4 flex justify-center md:hidden pointer-events-none"
+      >
+        <nav className="bg-white/90 dark:bg-black/80 backdrop-blur-xl border border-black/10 dark:border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.1)] dark:shadow-[0_8px_32px_rgba(220,38,38,0.15)] rounded-full p-2 flex items-center justify-between pointer-events-auto w-full max-w-[400px]">
+          {NAV_LINKS.map((link) => {
             const isActive = activeSection === link.href;
+            const Icon = link.icon;
+            
             return (
-              <Link
+              <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setActiveSection(link.href)}
-                className={`relative px-4 py-2 rounded-full text-xs font-medium transition-colors whitespace-nowrap ${
-                  isActive ? "text-white" : "text-gray-400"
+                className={`relative flex items-center justify-center p-3 rounded-full transition-all duration-300 overflow-hidden ${
+                  isActive 
+                    ? "text-white w-auto px-5" 
+                    : "text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white w-12"
                 }`}
               >
                 {isActive && (
                   <motion.div
                     layoutId="nav-pill-mobile"
-                    className="absolute inset-0 bg-red-600/90 rounded-full z-[-1]"
+                    className="absolute inset-0 bg-red-600/90 rounded-full z-[-1] shadow-[0_0_15px_rgba(220,38,38,0.4)]"
                     transition={{ type: "spring", stiffness: 300, damping: 30 }}
                   />
                 )}
-                <span className="relative z-10">{link.name}</span>
-              </Link>
+                <Icon className={`w-5 h-5 shrink-0 ${isActive ? "mr-2" : ""}`} />
+                {isActive && (
+                  <motion.span 
+                    initial={{ opacity: 0, width: 0 }}
+                    animate={{ opacity: 1, width: "auto" }}
+                    className="text-sm font-medium whitespace-nowrap"
+                  >
+                    {link.name}
+                  </motion.span>
+                )}
+              </a>
             );
           })}
         </nav>
-      </div>
-    </motion.header>
+      </motion.div>
+    </>
   );
 }

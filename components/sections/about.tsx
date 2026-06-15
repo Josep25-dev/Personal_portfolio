@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { BookOpen, Coffee, Cpu, Globe2 } from "lucide-react";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 export function About() {
@@ -42,10 +43,12 @@ export function About() {
           >
             {/* Main Image Container */}
             <div className="relative w-full aspect-square max-w-md mx-auto lg:mx-0 rounded-3xl overflow-hidden border border-gray-200 dark:border-white/10 bg-gray-100 dark:bg-zinc-900 group">
-              {/* Replace with your actual photo later. For now using a placeholder style */}
-              <div className="absolute inset-0 bg-gradient-to-br from-red-100 to-gray-200 dark:from-red-950/50 dark:to-black flex items-center justify-center">
-                <span className="text-gray-500 dark:text-white/20 font-medium">Tu Foto Aquí</span>
-              </div>
+              <Image 
+                src="/images/profile.jpg"
+                alt="Christian Josep"
+                fill
+                className="object-cover"
+              />
               
               {/* Hover effect overlay */}
               <div className="absolute inset-0 bg-red-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

@@ -23,17 +23,18 @@
     "description": "Una selección de los proyectos y prácticas que he desarrollado durante mi formación como Ingeniero en Software, demostrando mis habilidades técnicas y de resolución de problemas.",
     "viewCode": "Ver Código",
     "visitProject": "Visitar Proyecto",
-    "learnMore": "Saber más sobre el proyecto"
+    "learnMore": "Saber más sobre el proyecto",
+    "viewAll": "Todos mis proyectos"
   },
   "Skills": {
     "title": "Mis",
     "titleHighlight": "Habilidades",
     "description": "Conjunto de tecnologías y herramientas que utilizo para transformar ideas en productos digitales funcionales y atractivos.",
     "currentFocus": "Especialización Actual",
-    "currentFocusDesc": "Enfocado profundamente en el ecosistema Mobile con Kotlin.",
+    "currentFocusDesc": "Enfocado profundamente en el ecosistema Web y desarrollo Full-Stack.",
     "categories": {
       "frontend": "Web Frontend & Lenguajes",
-      "mobile": "Mobile",
+      "backend": "Backend",
       "tools": "Herramientas & Otros",
       "softSkills": "Soft Skills"
     },

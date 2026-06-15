@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, GitBranch, Code2 } from "lucide-react";
+import { ExternalLink, GitBranch, Code2, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 
@@ -56,14 +56,24 @@ export function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.5 }}
-          className="mb-16"
+          className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            {t("title")} <span className="text-red-600 dark:text-red-500">{t("titleHighlight")}</span>
-          </h2>
-          <p className="text-gray-600 dark:text-gray-400 max-w-2xl">
-            {t("description")}
-          </p>
+          <div className="max-w-2xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              {t("title")} <span className="text-red-600 dark:text-red-500">{t("titleHighlight")}</span>
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400">
+              {t("description")}
+            </p>
+          </div>
+          
+          <Link
+            href="/projects"
+            className="group flex items-center gap-2 px-6 py-3 bg-red-600/10 hover:bg-red-600/20 dark:bg-red-500/10 dark:hover:bg-red-500/20 text-red-600 dark:text-red-400 rounded-xl font-medium transition-all duration-300 whitespace-nowrap self-start md:self-auto"
+          >
+            {t("viewAll")}
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </Link>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">

@@ -2,9 +2,10 @@
 
 import React, { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Mail } from "lucide-react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { ArrowRight, Mail, Download } from "lucide-react";
+import { FaGithub, FaLinkedin, FaReact, FaHtml5, FaCss3Alt, FaJs } from "react-icons/fa";
 import Link from "next/link";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 export function Hero() {
@@ -146,7 +147,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="mt-10 flex flex-col sm:flex-row items-center gap-4"
+            className="mt-10 flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
           >
             <Link
               href="#projects"
@@ -155,12 +156,18 @@ export function Hero() {
               {t("ctaProjects")}
               <ArrowRight className="w-4 h-4" />
             </Link>
-            <Link
-              href="#contact"
-              className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-black/5 hover:bg-black/10 dark:bg-white/5 dark:hover:bg-white/10 border border-black/10 dark:border-white/10 text-gray-900 dark:text-white font-medium transition-all flex items-center justify-center gap-2 backdrop-blur-sm hover:border-red-500/30 dark:hover:border-red-500/30"
-            >
-              {t("ctaContact")}
-            </Link>
+            <div className="flex w-full sm:w-auto gap-4">
+              <a
+                href="/cv.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 sm:flex-none px-6 py-3.5 rounded-xl bg-black/5 hover:bg-black/10 dark:bg-white/5 dark:hover:bg-white/10 border border-black/10 dark:border-white/10 text-gray-900 dark:text-white font-medium transition-all flex items-center justify-center gap-2 backdrop-blur-sm hover:border-red-500/30 dark:hover:border-red-500/30"
+                title="Descargar CV"
+              >
+                CV
+                <Download className="w-4 h-4" />
+              </a>
+            </div>
           </motion.div>
         </div>
 
@@ -173,9 +180,47 @@ export function Hero() {
         >
           {/* Photo */}
           <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-[400px] lg:h-[400px] rounded-full p-2 bg-gradient-to-tr from-red-600 to-black/0 dark:from-red-500/50 dark:to-transparent">
+            {/* Floating Tech Icons */}
+            <motion.div
+              animate={{ y: [-10, 10, -10] }}
+              transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+              className="absolute top-[10%] left-[-5%] md:left-[-10%] z-20 bg-white dark:bg-zinc-900 p-3 rounded-full shadow-xl border border-black/5 dark:border-white/10 flex items-center justify-center"
+            >
+              <FaReact className="w-6 h-6 md:w-8 md:h-8 text-[#61DAFB]" />
+            </motion.div>
+            
+            <motion.div
+              animate={{ y: [10, -10, 10] }}
+              transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
+              className="absolute bottom-[15%] left-[-2%] md:left-[-5%] z-20 bg-white dark:bg-zinc-900 p-3 rounded-full shadow-xl border border-black/5 dark:border-white/10 flex items-center justify-center"
+            >
+              <FaJs className="w-5 h-5 md:w-7 md:h-7 text-[#F7DF1E]" />
+            </motion.div>
+
+            <motion.div
+              animate={{ y: [-12, 8, -12] }}
+              transition={{ repeat: Infinity, duration: 4.5, ease: "easeInOut" }}
+              className="absolute top-[15%] right-[-5%] md:right-[-10%] z-20 bg-white dark:bg-zinc-900 p-3 rounded-full shadow-xl border border-black/5 dark:border-white/10 flex items-center justify-center"
+            >
+              <FaHtml5 className="w-6 h-6 md:w-8 md:h-8 text-[#E34F26]" />
+            </motion.div>
+
+            <motion.div
+              animate={{ y: [8, -12, 8] }}
+              transition={{ repeat: Infinity, duration: 5.5, ease: "easeInOut" }}
+              className="absolute bottom-[10%] right-[-2%] md:right-[-5%] z-20 bg-white dark:bg-zinc-900 p-3 rounded-full shadow-xl border border-black/5 dark:border-white/10 flex items-center justify-center"
+            >
+              <FaCss3Alt className="w-6 h-6 md:w-8 md:h-8 text-[#1572B6]" />
+            </motion.div>
+
             <div className="w-full h-full rounded-full bg-gray-200 dark:bg-zinc-900 overflow-hidden border-4 border-white dark:border-[#050505] flex items-center justify-center relative z-10">
-               <span className="text-gray-500 dark:text-gray-400 font-medium">Tu Foto</span>
-               {/* Reemplaza el div anterior por un componente <Image /> cuando tengas tu foto real */}
+              <Image 
+                src="/images/profile.jpg"
+                alt="Christian Josep"
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
             {/* Glow behind */}
             <div className="absolute inset-0 rounded-full bg-red-600/20 dark:bg-red-500/20 blur-[50px] -z-10" />
@@ -189,7 +234,7 @@ export function Hero() {
             className="mt-8 flex items-center justify-center gap-4 w-full"
           >
             <a
-              href="https://github.com/TuUsuario" // Reemplaza con tu enlace real
+              href="https://github.com/Josep25-dev"
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 rounded-full flex items-center justify-center bg-gray-100 dark:bg-white/5 hover:bg-red-100 dark:hover:bg-red-500/20 text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400 transition-all border border-transparent hover:border-red-500/30 shadow-sm dark:shadow-none"
@@ -198,7 +243,7 @@ export function Hero() {
               <FaGithub className="w-5 h-5" />
             </a>
             <a
-              href="https://linkedin.com/in/TuUsuario" // Reemplaza con tu enlace real
+              href="https://www.linkedin.com/in/christian-josep-toledo-9463a4404"
               target="_blank"
               rel="noopener noreferrer"
               className="w-12 h-12 rounded-full flex items-center justify-center bg-gray-100 dark:bg-white/5 hover:bg-red-100 dark:hover:bg-red-500/20 text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400 transition-all border border-transparent hover:border-red-500/30 shadow-sm dark:shadow-none"
@@ -207,7 +252,7 @@ export function Hero() {
               <FaLinkedin className="w-5 h-5" />
             </a>
             <a
-              href="mailto:tu-correo@gmail.com" // Reemplaza con tu correo real
+              href="mailto:josep.toledo.dev@gmail.com"
               className="w-12 h-12 rounded-full flex items-center justify-center bg-gray-100 dark:bg-white/5 hover:bg-red-100 dark:hover:bg-red-500/20 text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400 transition-all border border-transparent hover:border-red-500/30 shadow-sm dark:shadow-none"
               aria-label="Email"
             >
