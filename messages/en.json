@@ -20,16 +20,22 @@
   "Projects": {
     "title": "My Featured",
     "titleHighlight": "Projects",
-    "description": "A selection of projects and practices I have developed during my Software Engineering education, showcasing my technical and problem-solving skills.",
+    "description": "A selection of my most recent and relevant work.",
     "viewCode": "View Code",
     "visitProject": "Visit Project",
     "learnMore": "Learn more about the project",
-    "viewAll": "All my projects"
+    "viewAll": "All my projects",
+    "workliTitle": "WORKLi (SaaS)",
+    "workliDesc": "Business and client management platform that centralizes finances, tasks, and documents. Developed with a modular widget-based architecture, allowing for dynamic, scalable workspaces 100% adaptable to any professional service model.",
+    "ecommerceTitle": "E-Commerce API REST",
+    "ecommerceDesc": "Full e-commerce backend with payments and inventory management.",
+    "geneticTitle": "Genetic Algorithm",
+    "geneticDesc": "Traveling salesman problem optimization with Python data visualization."
   },
   "Skills": {
     "title": "My",
     "titleHighlight": "Skills",
-    "description": "Set of technologies and tools I use to transform ideas into functional and attractive digital products.",
+    "description": "My tech stack and professional skills.",
     "currentFocus": "Current Focus",
     "currentFocusDesc": "Deeply focused on the Web ecosystem and Full-Stack development.",
     "categories": {
@@ -49,26 +55,26 @@
   "About": {
     "title": "About",
     "titleHighlight": "Me",
-    "description": "Learn a bit more about my story, my approach to software engineering, and what motivates me every day.",
-    "badgeTitle": "Continuous Learning",
-    "badgeDesc": "Always exploring new technologies",
-    "headline": "Upcoming Software Engineer passionate about creating solutions that matter.",
-    "p1": "Since I wrote my first line of code, I discovered that programming is much more than math and logic; it's a powerful tool to solve real problems and improve people's lives.",
-    "p2": "I am currently in the final stretch of my Software Engineering degree. During my studies, I have focused not only on passing subjects but on building tangible projects, understanding the architecture behind applications, and adopting good development practices (Clean Code, SOLID, agile methodologies).",
-    "p3": "My goal is to join a dynamic team where I can add value from day one, face new technical challenges, and continue growing professionally.",
+    "description": "A brief summary of who I am and my professional approach.",
+    "badgeTitle": "Constant Innovation",
+    "badgeDesc": "Always at the technical forefront",
+    "headline": "Software Engineer specialized in creating high-impact digital solutions.",
+    "p1": "Since I wrote my first line of code, I discovered that programming is a powerful tool to transform realities and optimize critical processes.",
+    "p2": "With a solid focus on software architecture, I specialize in building scalable, robust, and user-centric applications. My expertise centers on developing digital products that not only work but meet the highest quality standards (Clean Code, SOLID, agile methodologies).",
+    "p3": "My goal is to provide innovative technical solutions in high-performance teams, tackling complex challenges and elevating the quality of every project I participate in.",
     "trait1": "Software Architecture",
     "trait2": "Full-Stack Web Dev",
     "trait3": "Problem Solving"
   },
   "Experience": {
     "title": "Experience &",
-    "titleHighlight": "Education",
-    "description": "A journey through my academic projects, internships, and my evolution as a developer."
+    "titleHighlight": "Trajectory",
+    "description": "My professional journey and key projects."
   },
   "Contact": {
     "title": "Contact &",
     "titleHighlight": "Socials",
-    "description": "Have a project in mind or just want to say hi? I'd love to hear from you!",
+    "description": "Let's talk! I'm available for new projects.",
     "name": "Name",
     "namePlaceholder": "Your name",
     "email": "Email",
@@ -79,6 +85,7 @@
     "socialsTitle": "My Socials",
     "socialsDesc": "You can also find me on these platforms:",
     "location": "Location",
-    "locationValue": "Mexico (Remote)"
+    "locationValue": "Mexico (Remote)",
+    "rights": "All rights reserved."
   }
 }

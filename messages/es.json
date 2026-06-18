@@ -20,11 +20,17 @@
   "Projects": {
     "title": "Mis Proyectos",
     "titleHighlight": "Destacados",
-    "description": "Una selección de los proyectos y prácticas que he desarrollado durante mi formación como Ingeniero en Software, demostrando mis habilidades técnicas y de resolución de problemas.",
+    "description": "Una selección de soluciones tecnológicas y aplicaciones que he desarrollado, demostrando mi capacidad para resolver problemas complejos con código eficiente.",
     "viewCode": "Ver Código",
     "visitProject": "Visitar Proyecto",
     "learnMore": "Saber más sobre el proyecto",
-    "viewAll": "Todos mis proyectos"
+    "viewAll": "Todos mis proyectos",
+    "workliTitle": "WORKLi (SaaS)",
+    "workliDesc": "Plataforma de gestión empresarial y de clientes que centraliza finanzas, tareas y documentos. Desarrollada con una arquitectura modular basada en widgets, permitiendo crear espacios de trabajo dinámicos, escalables y 100% adaptables a cualquier modelo de servicio profesional.",
+    "ecommerceTitle": "E-Commerce API REST",
+    "ecommerceDesc": "Backend completo para comercio electrónico con pagos y gestión de inventario.",
+    "geneticTitle": "Algoritmo Genético",
+    "geneticDesc": "Optimización del problema del viajante con visualización de datos en Python."
   },
   "Skills": {
     "title": "Mis",
@@ -50,20 +56,20 @@
     "title": "Sobre",
     "titleHighlight": "Mí",
     "description": "Conoce un poco más sobre mi historia, mi enfoque hacia la ingeniería de software y lo que me motiva día a día.",
-    "badgeTitle": "Aprendizaje Continuo",
-    "badgeDesc": "Siempre explorando nuevas tecnologías",
-    "headline": "Próximo Ingeniero en Software apasionado por crear soluciones que importan.",
-    "p1": "Desde que escribí mi primera línea de código, descubrí que la programación es mucho más que matemáticas y lógica; es una herramienta poderosa para resolver problemas reales y mejorar la vida de las personas.",
-    "p2": "Actualmente me encuentro en la recta final de mi carrera en Ingeniería de Software. Durante mis estudios, no solo me he enfocado en aprobar materias, sino en construir proyectos tangibles, entender la arquitectura detrás de las aplicaciones y adoptar buenas prácticas de desarrollo (Clean Code, SOLID, metodologías ágiles).",
-    "p3": "Mi objetivo es unirme a un equipo dinámico donde pueda aportar valor desde el primer día, enfrentar nuevos retos técnicos y seguir creciendo profesionalmente.",
+    "badgeTitle": "Innovación Constante",
+    "badgeDesc": "Siempre a la vanguardia tecnológica",
+    "headline": "Ingeniero en Software especializado en crear soluciones digitales de alto impacto.",
+    "p1": "Desde que escribí mi primera línea de código, descubrí que la programación es una herramienta poderosa para transformar realidades y optimizar procesos críticos.",
+    "p2": "Con un enfoque sólido en la arquitectura de software, me especializo en construir aplicaciones escalables, robustas y centradas en el usuario. Mi experiencia se centra en el desarrollo de productos digitales que no solo funcionan, sino que cumplen con los más altos estándares de calidad (Clean Code, SOLID, metodologías ágiles).",
+    "p3": "Mi objetivo es aportar soluciones técnicas innovadoras en equipos de alto rendimiento, enfrentando retos complejos y elevando la calidad de cada proyecto en el que participo.",
     "trait1": "Arquitectura de Software",
     "trait2": "Desarrollo Web Full-Stack",
     "trait3": "Resolución de Problemas"
   },
   "Experience": {
     "title": "Experiencia y",
-    "titleHighlight": "Educación",
-    "description": "Un recorrido por mis proyectos académicos, prácticas y mi evolución como desarrollador."
+    "titleHighlight": "Trayectoria",
+    "description": "Un recorrido por mi evolución profesional, proyectos clave y especialización técnica."
   },
   "Contact": {
     "title": "Contacto y",
@@ -79,6 +85,7 @@
     "socialsTitle": "Mis Redes Sociales",
     "socialsDesc": "También puedes encontrarme en estas plataformas:",
     "location": "Ubicación",
-    "locationValue": "México (Remoto)"
+    "locationValue": "México (Remoto)",
+    "rights": "Todos los derechos reservados."
   }
 }

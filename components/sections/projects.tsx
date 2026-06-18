@@ -4,26 +4,26 @@ import React from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, GitBranch, Code2, ArrowRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 // Datos de ejemplo: Puedes cambiar estos datos por tus proyectos reales
 const PROJECTS = [
   {
     id: 1,
-    title: "Sistema de Gestión Académica",
-    description:
-      "Plataforma integral para la gestión de alumnos, calificaciones y horarios. Desarrollado como proyecto principal de la carrera enfocándome en arquitectura escalable.",
-    tech: ["Next.js", "TypeScript", "Prisma", "PostgreSQL"],
-    // Usamos un div con gradiente como placeholder de la imagen por ahora
+    titleKey: "workliTitle",
+    descKey: "workliDesc",
+    tech: ["Next.js", "TypeScript", "React", "Tailwind", "Server Actions", "API REST"],
+    // Imagen real del proyecto
+    image: "/images/worki.png",
     imageGradient: "from-red-900 to-black",
     githubUrl: "#",
     liveUrl: "#",
   },
   {
     id: 2,
-    title: "E-Commerce API REST",
-    description:
-      "Backend completo para comercio electrónico con autenticación, pasarela de pagos, gestión de inventario y optimización de consultas a la base de datos.",
+    titleKey: "ecommerceTitle",
+    descKey: "ecommerceDesc",
     tech: ["Node.js", "Express", "MongoDB", "Docker"],
     imageGradient: "from-zinc-800 to-black",
     githubUrl: "#",
@@ -31,9 +31,8 @@ const PROJECTS = [
   },
   {
     id: 3,
-    title: "Algoritmo Genético - Optimización",
-    description:
-      "Implementación de un algoritmo genético en Python para resolver el problema del viajante de comercio (TSP), con interfaz gráfica y visualización de datos.",
+    titleKey: "geneticTitle",
+    descKey: "geneticDesc",
     tech: ["Python", "Matplotlib", "Tkinter", "NumPy"],
     imageGradient: "from-red-950 to-zinc-900",
     githubUrl: "#",
@@ -86,12 +85,24 @@ export function Projects() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group relative flex flex-col bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-2xl overflow-hidden hover:border-red-500/30 dark:hover:border-red-500/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(220,38,38,0.05)] dark:hover:shadow-[0_0_30px_rgba(220,38,38,0.1)]"
             >
-              {/* Project Image Placeholder */}
+              {/* Project Image Container */}
               <div
-                className={`w-full h-48 bg-gradient-to-br ${project.imageGradient} relative overflow-hidden flex items-center justify-center`}
+                className={`w-full aspect-[16/10] bg-gradient-to-br ${project.imageGradient} relative overflow-hidden p-3 flex items-center justify-center`}
               >
-                {/* Simulated Image Content */}
-                <Code2 className="w-12 h-12 text-white/20 group-hover:scale-110 transition-transform duration-500" />
+                {project.image ? (
+                  <div className="relative w-[95%] h-[95%] rounded-xl overflow-hidden shadow-2xl border border-white/10 bg-white/5 group-hover:scale-105 transition-transform duration-500">
+                    <Image
+                      src={project.image}
+                      alt={t(project.titleKey)}
+                      fill
+                      className="object-contain p-1.5"
+                    />
+                  </div>
+                ) : (
+                  <div className="relative w-[80%] h-[80%] rounded-xl border-2 border-dashed border-white/20 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+                    <Code2 className="w-12 h-12 text-white/20" />
+                  </div>
+                )}
                 
                 {/* Overlay on Hover */}
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4 backdrop-blur-sm">
@@ -115,10 +126,10 @@ export function Projects() {
               {/* Project Info */}
               <div className="p-6 flex flex-col flex-grow">
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3 group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">
-                  {project.title}
+                  {t(project.titleKey)}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 flex-grow line-clamp-3">
-                  {project.description}
+                <p className="text-gray-600 dark:text-gray-400 text-sm mb-6 line-clamp-4">
+                  {t(project.descKey)}
                 </p>
 
                 {/* Tech Stack */}

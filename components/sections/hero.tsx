@@ -113,10 +113,15 @@ export function Hero() {
       {/* Interactive Particles */}
       <canvas ref={canvasRef} className="absolute inset-0 z-0 pointer-events-auto" />
 
-      {/* Top light rays effect (simulated with gradients) */}
-      <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[80%] h-[500px] bg-red-900/20 blur-[120px] rounded-full z-0 pointer-events-none" />
+      {/* Background gradients */}
+      <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[80%] h-[500px] bg-red-600/10 dark:bg-red-900/20 blur-[120px] rounded-full z-0 pointer-events-none" />
 
-      {/* Content */}
+      {/* Bottom Glowing Horizon - Adapted for light/dark mode */}
+      <div className="absolute bottom-0 left-0 right-0 h-[40vh] z-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-[50%] left-1/2 -translate-x-1/2 w-[150%] h-[1000px] rounded-[100%] border-[2px] border-red-500/30 bg-white dark:bg-black shadow-[0_-50px_100px_rgba(220,38,38,0.15)] backdrop-blur-3xl transition-colors duration-300" />
+        <div className="absolute top-[50%] left-1/2 -translate-x-1/2 w-[100%] h-[10px] bg-red-500/50 blur-[20px]" />
+      </div>
+
       <div className="relative z-10 container mx-auto px-6 md:px-12 lg:px-16 flex flex-col-reverse lg:flex-row items-center justify-between mt-20 gap-12 lg:gap-8 max-w-7xl">
         
         {/* Left: Text Content */}
@@ -158,11 +163,11 @@ export function Hero() {
             </Link>
             <div className="flex w-full sm:w-auto gap-4">
               <a
-                href="/cv.pdf"
+                href="/CV_ChristianJosepToledo.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 sm:flex-none px-6 py-3.5 rounded-xl bg-black/5 hover:bg-black/10 dark:bg-white/5 dark:hover:bg-white/10 border border-black/10 dark:border-white/10 text-gray-900 dark:text-white font-medium transition-all flex items-center justify-center gap-2 backdrop-blur-sm hover:border-red-500/30 dark:hover:border-red-500/30"
-                title="Descargar CV"
+                title="Ver CV"
               >
                 CV
                 <Download className="w-4 h-4" />
@@ -231,41 +236,35 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="mt-8 flex items-center justify-center gap-4 w-full"
+            className="mt-8 flex items-center justify-center gap-4 w-full relative z-20"
           >
             <a
               href="https://github.com/Josep25-dev"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-12 h-12 rounded-full flex items-center justify-center bg-gray-100 dark:bg-white/5 hover:bg-red-100 dark:hover:bg-red-500/20 text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400 transition-all border border-transparent hover:border-red-500/30 shadow-sm dark:shadow-none"
+              className="w-12 h-12 rounded-full flex items-center justify-center bg-white dark:bg-zinc-900 hover:bg-red-600 dark:hover:bg-red-600 text-gray-900 dark:text-white hover:text-white dark:hover:text-white transition-all border border-gray-200 dark:border-white/10 shadow-lg hover:shadow-red-600/20"
               aria-label="GitHub"
             >
-              <FaGithub className="w-5 h-5" />
+              <FaGithub className="w-6 h-6" />
             </a>
             <a
               href="https://www.linkedin.com/in/christian-josep-toledo-9463a4404"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-12 h-12 rounded-full flex items-center justify-center bg-gray-100 dark:bg-white/5 hover:bg-red-100 dark:hover:bg-red-500/20 text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400 transition-all border border-transparent hover:border-red-500/30 shadow-sm dark:shadow-none"
+              className="w-12 h-12 rounded-full flex items-center justify-center bg-white dark:bg-zinc-900 hover:bg-red-600 dark:hover:bg-red-600 text-gray-900 dark:text-white hover:text-white dark:hover:text-white transition-all border border-gray-200 dark:border-white/10 shadow-lg hover:shadow-red-600/20"
               aria-label="LinkedIn"
             >
-              <FaLinkedin className="w-5 h-5" />
+              <FaLinkedin className="w-6 h-6" />
             </a>
             <a
               href="mailto:josep.toledo.dev@gmail.com"
-              className="w-12 h-12 rounded-full flex items-center justify-center bg-gray-100 dark:bg-white/5 hover:bg-red-100 dark:hover:bg-red-500/20 text-gray-600 dark:text-gray-400 hover:text-red-600 dark:hover:text-red-400 transition-all border border-transparent hover:border-red-500/30 shadow-sm dark:shadow-none"
+              className="w-12 h-12 rounded-full flex items-center justify-center bg-white dark:bg-zinc-900 hover:bg-red-600 dark:hover:bg-red-600 text-gray-900 dark:text-white hover:text-white dark:hover:text-white transition-all border border-gray-200 dark:border-white/10 shadow-lg hover:shadow-red-600/20"
               aria-label="Email"
             >
-              <Mail className="w-5 h-5" />
+              <Mail className="w-6 h-6" />
             </a>
           </motion.div>
         </motion.div>
-      </div>
-
-      {/* Bottom Glowing Horizon */}
-      <div className="absolute bottom-0 left-0 right-0 h-[40vh] z-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-[50%] left-1/2 -translate-x-1/2 w-[150%] h-[1000px] rounded-[100%] border-[2px] border-red-500/30 bg-black shadow-[0_-50px_100px_rgba(220,38,38,0.15)] backdrop-blur-3xl" />
-        <div className="absolute top-[50%] left-1/2 -translate-x-1/2 w-[100%] h-[10px] bg-red-500/50 blur-[20px]" />
       </div>
     </section>
   );

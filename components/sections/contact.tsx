@@ -171,7 +171,7 @@ export function Contact() {
       {/* Footer / Copyright */}
       <div className="mt-24 pt-8 border-t border-gray-200 dark:border-white/5 text-center">
         <p className="text-gray-500 dark:text-gray-400 text-sm">
-          © {new Date().getFullYear()} Christian Josep. Todos los derechos reservados.
+          © {new Date().getFullYear()} Christian Josep. {t("rights")}
         </p>
       </div>
     </section>
