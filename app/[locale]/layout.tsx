@@ -8,12 +8,29 @@ import "../globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils";
 
+import { Metadata } from "next";
+
 const geist = Geist({subsets:['latin'],variable:'--font-sans'})
 
 const fontMono = Geist_Mono({
   subsets: ["latin"],
   variable: "--font-mono",
 })
+
+export const metadata: Metadata = {
+  title: "Christian Josep | Portafolio",
+  description: "Portafolio web de Christian Josep, Ingeniero en Desarrollo de Software especializado en Front-end y Full-Stack.",
+  icons: {
+    icon: [
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' }
+    ],
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
+  manifest: '/site.webmanifest',
+};
 
 export default async function RootLayout({
   children,
@@ -35,7 +52,7 @@ export default async function RootLayout({
       suppressHydrationWarning
       className={cn("antialiased", fontMono.variable, "font-sans", geist.variable)}
     >
-      <body>
+      <body suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>{children}</ThemeProvider>
         </NextIntlClientProvider>

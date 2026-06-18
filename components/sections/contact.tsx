@@ -15,7 +15,7 @@ export function Contact() {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-gray-200 dark:via-white/10 to-transparent" />
       <div className="absolute -left-40 top-40 w-96 h-96 bg-red-600/5 dark:bg-red-500/10 blur-[100px] rounded-full pointer-events-none" />
 
-      <div className="container mx-auto px-4 max-w-5xl relative z-10">
+      <div className="container mx-auto px-6 md:px-12 lg:px-16 relative z-10 max-w-7xl">
         <div className="text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}

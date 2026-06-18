@@ -34,7 +34,7 @@ export function Experience() {
 
   return (
     <section id="experience" className="py-24 relative bg-gray-50 dark:bg-[#050505] transition-colors duration-300">
-      <div className="container mx-auto px-4 md:px-8 relative z-10">
+      <div className="container mx-auto px-6 md:px-12 lg:px-16 relative z-10 max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

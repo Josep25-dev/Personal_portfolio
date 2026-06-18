@@ -10,12 +10,12 @@ export function About() {
   const t = useTranslations("About");
 
   return (
-    <section id="about" className="py-24 relative bg-white dark:bg-black transition-colors duration-300 overflow-hidden">
+    <section id="about" className="py-24 relative bg-white dark:bg-[#050505] transition-colors duration-300 overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-red-900/50 to-transparent" />
       <div className="absolute -left-40 top-40 w-80 h-80 bg-red-900/10 blur-[100px] rounded-full pointer-events-none" />
 
-      <div className="container mx-auto px-4 md:px-8 relative z-10">
+      <div className="container mx-auto px-6 md:px-12 lg:px-16 relative z-10 max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

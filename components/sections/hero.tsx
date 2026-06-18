@@ -117,7 +117,7 @@ export function Hero() {
       <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[80%] h-[500px] bg-red-900/20 blur-[120px] rounded-full z-0 pointer-events-none" />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 flex flex-col-reverse lg:flex-row items-center justify-between mt-20 gap-12 lg:gap-8">
+      <div className="relative z-10 container mx-auto px-6 md:px-12 lg:px-16 flex flex-col-reverse lg:flex-row items-center justify-between mt-20 gap-12 lg:gap-8 max-w-7xl">
         
         {/* Left: Text Content */}
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left max-w-2xl">

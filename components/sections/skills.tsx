@@ -59,11 +59,11 @@ export function Skills() {
   const t = useTranslations("Skills");
 
   return (
-    <section id="skills" className="py-24 relative bg-gray-50 dark:bg-black transition-colors duration-300 overflow-hidden">
+    <section id="skills" className="py-24 relative bg-gray-50 dark:bg-black transition-colors duration-300 overflow-hidden" suppressHydrationWarning>
       {/* Background gradients */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[500px] bg-red-900/10 blur-[150px] rounded-full pointer-events-none" />
+      <div suppressHydrationWarning className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-[500px] bg-red-900/10 blur-[150px] rounded-full pointer-events-none" />
 
-      <div className="container mx-auto px-4 md:px-8 relative z-10">
+      <div className="container mx-auto px-6 md:px-12 lg:px-16 relative z-10 max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
